@@ -12,10 +12,12 @@ app.use(express.json()); //req.body
 //create a todo
 app.post('/todos', async (req, res) => {
     try {
+        const { title } = req.body;
         const { description } = req.body;
+        const {due_date} = req.body;
         const newTodo = await pool.query(
-            "INSERT INTO todo (description) VALUES($1) RETURNING *",
-            [description]
+            "INSERT INTO todo (title,description,due_date) VALUES ($1,$2,$3) RETURNING *",
+            [title,description,due_date]
         );
 
         res.json(newTodo.rows[0]);
@@ -55,9 +57,10 @@ app.get('/todos/:id',async(req,res)=>{
 app.put('/todos/:id',async(req,res)=>{
     try{
         const {id} = req.params;
+        const {title} = req.body;
         const {description} = req.body;
         const editTodo = await pool.query(
-            "UPDATE todo SET description = $1 WHERE todo_id = $2",[description,id]
+            "UPDATE todo SET description = $1 , title = $2 WHERE todo_id = $3",[description,title,id]
         )
         res.json("Todo was edited");
     }
@@ -79,6 +82,19 @@ app.delete('/todos/:id',async(req,res)=>{
         console.log(err.message);
     }
 })
+
+//delete all todos 
+app.delete('/todos',async(req,res)=>{
+    try{
+        const deleteAll = await pool.query(
+            "DELETE FROM todo"
+        )
+        res.json("All Todos DELETED!")
+    }
+    catch(err){
+        console.log(err.message);
+    }
+});
 
 
 //server
