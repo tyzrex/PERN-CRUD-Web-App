@@ -8,7 +8,7 @@ const Homepage = () => {
         <div>
             <Navbar />
             <div className='flex'>
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <TodoList />
             </div>
         </div>

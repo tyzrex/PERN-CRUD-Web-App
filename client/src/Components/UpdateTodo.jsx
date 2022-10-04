@@ -12,7 +12,7 @@ function UpdateTodo(props) {
         e.preventDefault();
         try {
             const body = { title, description };
-            const response = await fetch(`http://localhost:4000/todos/${props.todo_id}`, {
+            const response = await fetch(`/todos/${props.todo_id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)

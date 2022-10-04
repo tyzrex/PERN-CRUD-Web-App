@@ -31,7 +31,7 @@ const Navbar = () => {
                         <div className={!profile ?"absolute z-50 my-4 top-20 right-20 text-base list-none bg-white rounded divide-y divide-gray-100 lg:right-28 shadow dark:bg-gray-700 dark:divide-gray-600" : "hidden"} >
                             <div className="py-3 px-4">
                                 <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">dummy email</span>
                             </div>
                             <ul className="py-1" >
                                 <li>
@@ -57,19 +57,19 @@ const Navbar = () => {
                     <div className={!nav? " block justify-between items-center w-full md:flex md:w-auto md:order-1" : "hidden md:flex ease-in-out duration-500"}  >
                         <ul className="flex flex-col p-4 mt-4 bg-gray rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-green-600 bg-white" >
                             <li>
-                                <a href="/" className="block py-2 pr-4 pl-3 text-white bg-green-500 rounded md:bg-transparent md:text-gray-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                                <a href="/" className="block py-2 pr-4 pl-3 text-black bg-green-500 rounded md:bg-transparent md:text-gray-700 md:p-0 dark:text-white" aria-current="page">Home</a>
                             </li>
                             <li>
-                                <a href="/" className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                <a href="/" className="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                             </li>
                             <li>
-                                <a href="/" className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                <a href="/" className="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
                             </li>
                             <li>
-                                <a href="/" className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                                <a href="/" className="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                             </li>
                             <li>
-                                <a href="/" className="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                                <a href="/" className="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Feedback</a>
                             </li>
                         </ul>
                     </div>

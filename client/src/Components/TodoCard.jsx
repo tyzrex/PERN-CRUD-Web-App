@@ -9,7 +9,7 @@ const TodoCard = (props) => {
 
     const deleteTodo = async (id) => {
         try {
-            const response = await fetch(`http://localhost:4000/todos/${id}`, {
+            const response = await fetch(`/todos/${id}`, {
                 method: "DELETE"
             });
             props.setTodos(props.todos.filter(todo => todo.todo_id !== id));

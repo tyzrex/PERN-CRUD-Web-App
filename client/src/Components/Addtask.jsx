@@ -25,7 +25,7 @@ const Addtask = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-          const response = await fetch("http://localhost:4000/todos", {
+          const response = await fetch("/todos", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({title: title, description: description, due_date: due})
@@ -42,7 +42,7 @@ const Addtask = () => {
     const clearAllTodos = async (e) => {
       e.preventDefault();
       try{
-        const response = await fetch("http://localhost:4000/todos", {
+        const response = await fetch("/todos", {
           method: "DELETE",
           headers: {"Content-Type": "application/json"},
       }
