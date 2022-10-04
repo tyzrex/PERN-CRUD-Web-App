@@ -13,10 +13,10 @@ app.use(cors());
 app.use(express.json()); //req.body
 
 //process.end.NODE_ENV is for heroku
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "client/build")));
-}
-// app.use(express.static(path.join(__dirname, "client/build")));
+// if (process.env.NODE_ENV === "production") {
+//     app.use(express.static(path.join(__dirname, "client/build")));
+// }
+app.use(express.static(path.join(__dirname ,"client/build")));
 
 //ROUTES//
 
@@ -108,7 +108,7 @@ app.delete('/todos',async(req,res)=>{
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+    res.sendFile(path.join(__dirname, 'client/build/'));
 });
 
 
